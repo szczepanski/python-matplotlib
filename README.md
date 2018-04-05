@@ -15,13 +15,22 @@ https://www.udemy.com/data-visualization-with-python-and-matplotlib/learn/v4/con
 ```python
 import matplotlib.pyplot as plt
 
-x = [1, 2, 3, 4, 5]
-y = [6, 7, 4, 5, 2]
+# 1st plot
+x1 = [1, 2, 3, 4, 5]
+y1 = [6, 7, 4, 5, 2]
 
-plt.plot(x, y)
+# 2nd plot
+x2 = [2, 4, 7, 3, 4]
+y2 = [3, 3, 4, 6, 4]
+
+# 3rd argument in plots - label name => to be used in legend
+plt.plot(x1, y1, label='1st plot')
+plt.plot(x2, y2, label='2nd plot')
+
 plt.title('Basic Graph \n'
           'with a new line subtitle')
 plt.xlabel('x axis label')
 plt.ylabel('y axis label')
+plt.legend()
 plt.show()
 ```
