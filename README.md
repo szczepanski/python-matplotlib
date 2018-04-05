@@ -13,6 +13,8 @@ https://www.udemy.com/data-visualization-with-python-and-matplotlib/learn/v4/con
 ## Basic Graph
 
 ```python
+#!/usr/bin/env python
+# basic 2 plot graph
 import matplotlib.pyplot as plt
 
 # 1st plot
@@ -23,7 +25,7 @@ y1 = [6, 7, 4, 5, 2]
 x2 = [2, 4, 7, 3, 4]
 y2 = [3, 3, 4, 6, 4]
 
-# 3rd argument in plots - label name => to be used in legend
+# 3rd argument - label name => to be used in legend
 plt.plot(x1, y1, label='1st plot')
 plt.plot(x2, y2, label='2nd plot')
 
@@ -33,4 +35,5 @@ plt.xlabel('x axis label')
 plt.ylabel('y axis label')
 plt.legend()
 plt.show()
+
 ```
