@@ -63,18 +63,33 @@ plt.legend()
 plt.show()
 
 ```
-## Basic automated bar chart - larger data set
+## Basic automated bar chart - for larger data sets
 
 ```python
 #!/usr/bin/env python
 # basic automated bar chart with larger data set
 import matplotlib.pyplot as plt
 data_set = [10,22,32,45,15,99,63,56,23,89,55,43,17,93,24]
-x = 0
-
-[x for x in range(len(data_set))]
+x= [x for x in range(len(data_set))]
 
 plt.bar(x, data_set)
 plt.show()
 ```
+## Basic  histogram chart with bins option - containers - grouping
 
+```python
+#!/usr/bin/env python
+# basic  histogram chart with larger data set and bins option - containers - grouping
+
+import matplotlib.pyplot as plt
+
+# data_set values all above 40
+data_set = [41,77,88,44,45,55,99,63,56,99,89,55,43,78,93,49]
+
+# bins serve a function of containers in this case for all values in data set (all are >= 40)
+bins = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+# cumulative=True - sort bars in ascending order, rwidth - bar width
+plt.hist(data_set, bins, histtype='bar', cumulative=True, rwidth=0.8)
+plt.show()
+```
