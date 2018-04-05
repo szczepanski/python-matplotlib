@@ -63,3 +63,18 @@ plt.legend()
 plt.show()
 
 ```
+## Basic automated bar chart - larger data set
+
+```python
+#!/usr/bin/env python
+# basic automated bar chart with larger data set
+import matplotlib.pyplot as plt
+data_set = [10,22,32,45,15,99,63,56,23,89,55,43,17,93,24]
+x = 0
+
+[x for x in range(len(data_set))]
+
+plt.bar(x, data_set)
+plt.show()
+```
+
