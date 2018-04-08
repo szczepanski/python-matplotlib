@@ -23,7 +23,7 @@ colors = [u'indigo', u'gold', u'firebrick', u'indianred', u'yellow', u'darkolive
 # y - data_set
 y = [10,22,32,45,15,99,63,56,23,89,55,43,17,93,24]
 # x - 0 to the length of dataset(y)
-x = [x for x in range(1,len(y)+1)]
+x = [x for x in range(1, len(y)+1)]
 # Legend - names
 legend_names = ['a/ACPProxy/Random/Lond/Data/tree/Name','b/ACPProxy/Random/Lond/Data/tree/Name',
            'c/ACPProxy/Random/Lond/Data/tree/Name','d/ACPProxy/Random/Lond/Data/tree/Name',
@@ -39,7 +39,7 @@ fig = plt.figure()
 
 
 ax1 = plt.subplot2grid((8,5), (0,0), rowspan=6, colspan=5)
-ax1.set_facecolor('snow')
+# ax1.set_facecolor('snow')
 ax1.spines['left'].set_color('lightgrey')
 ax1.spines['bottom'].set_color('lightgrey')
 ax1.spines['top'].set_visible(False)
@@ -66,10 +66,10 @@ ax2.set_xticks([],minor=False)
 ax2.set_yticks([],minor=False)
 
 handles, labels = ax1.get_legend_handles_labels()
-legend = ax2.legend(handles, labels, loc='center',title='Legend', framealpha=0.1, ncol=5,prop={'size':8}, fancybox=True, borderaxespad=0)
+legend = ax2.legend(handles, labels, loc='center', framealpha=0.1, ncol=4,prop={'size':8}, fancybox=True, borderaxespad=0)
 for text in legend.get_texts():
     text.set_color("grey")
 
-plt.subplots_adjust(wspace=0.2,hspace=1)
+plt.subplots_adjust(wspace=0.2,hspace=2)
 
 plt.show()
