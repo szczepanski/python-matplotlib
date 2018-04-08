@@ -1,7 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import random
-from matplotlib import style
+
+
+data_set = np.loadtxt(open("/Users/piotr/projects/python/2x/matplotlib_testing/data_set"),
+               dtype={
+                   'names': ('traffic_class','y_axis_values','x_axis_label','y_axis_label','title'),
+                   'formats': ('|S150', np.float, '|S150', '|S150', '|S150')},
+               delimiter=',', unpack=True,skiprows=1)
+
 
 colors = [u'indigo', u'gold', u'firebrick', u'indianred', u'yellow', u'darkolivegreen', u'darkseagreen',u'midnightblue',
           u'darkorange', u'darkslategrey', u'mediumvioletred', u'mediumorchid', u'mediumslateblue',u'salmon',u'pink',
@@ -21,25 +28,23 @@ colors = [u'indigo', u'gold', u'firebrick', u'indianred', u'yellow', u'darkolive
           u'mediumseagreen', u'slateblue']
 
 # y - data_set
-y = [10,22,32,45,15,99,63,56,23,89,55,43,17,93,24]
+y = data_set[1]
+
 # x - 0 to the length of dataset(y)
 x = [x for x in range(1, len(y)+1)]
-# Legend - names
-legend_names = ['a/ACPProxy/Random/Lond/Data/tree/Name','b/ACPProxy/Random/Lond/Data/tree/Name',
-           'c/ACPProxy/Random/Lond/Data/tree/Name','d/ACPProxy/Random/Lond/Data/tree/Name',
-           'e/ACPProxy/Random/Lond/Data/tree/Name','e/ACPProxy/Random/Lond/Data/tree/Name',
-           'f/ACPProxy/Random/Lond/Data/tree/Name','g/ACPProxy/Random/Lond/Data/tree/Name',
-           'h/ACPProxy/Random/Lond/Data/tree/Name','i/ACPProxy/Random/Lond/Data/tree/Name',
-           'j/ACPProxy/Random/Lond/Data/tree/Name','k/ACPProxy/Random/Lond/Data/tree/Name',
-           'l/ACPProxy/Random/Lond/Data/tree/Name','m/ACPProxy/Random/Lond/Data/tree/Name',
-           'n/ACPProxy/Random/Lond/Data/tree/Name']
 
+# Legend - names
+legend_names = data_set[0]
+
+x_axis_label = data_set[2][0]
+y_axis_label = data_set[3][0]
+plot_title = data_set[4][0]
 
 fig = plt.figure()
 
 
 ax1 = plt.subplot2grid((8,5), (0,0), rowspan=6, colspan=5)
-# ax1.set_facecolor('snow')
+ax1.set_facecolor('white')
 ax1.spines['left'].set_color('lightgrey')
 ax1.spines['bottom'].set_color('lightgrey')
 ax1.spines['top'].set_visible(False)
@@ -47,13 +52,13 @@ ax1.spines['right'].set_visible(False)
 ax1.set_xticks(x)
 
 
-ax1.set_title('ACP Domain')
+ax1.set_title(plot_title)
 for index, val in enumerate(y):
-    ax1.bar(x[index], y[index], 1, label=legend_names[index], alpha=0.5, color = random.sample(colors, 30))
+    ax1.bar(x[index], y[index], 1, label=legend_names[index], alpha=0.5, color=random.sample(colors, 30))
 for a,b in zip(x, y):
     plt.text(a, b, str(b), ha='center', color='grey')
-ax1.set_xlabel('x axis label')
-ax1.set_ylabel('y axis label')
+ax1.set_xlabel(x_axis_label)
+ax1.set_ylabel(y_axis_label)
 
 
 ax2 = plt.subplot2grid((8, 5), (6, 0), rowspan=2, colspan=5)
@@ -62,14 +67,16 @@ ax2.spines['left'].set_visible(False)
 ax2.spines['bottom'].set_visible(False)
 ax2.spines['top'].set_visible(False)
 ax2.spines['right'].set_visible(False)
-ax2.set_xticks([],minor=False)
-ax2.set_yticks([],minor=False)
+ax2.set_xticks([], minor=False)
+ax2.set_yticks([], minor=False)
 
 handles, labels = ax1.get_legend_handles_labels()
-legend = ax2.legend(handles, labels, loc='center', framealpha=0.1, ncol=4,prop={'size':8}, fancybox=True, borderaxespad=0)
+legend = ax2.legend(handles, labels, loc='center', framealpha=0.1, ncol=4, prop={'size':8}, fancybox=True, borderaxespad=0)
 for text in legend.get_texts():
     text.set_color("grey")
 
-plt.subplots_adjust(wspace=0.2,hspace=2)
+plt.subplots_adjust(wspace=0.2, hspace=2)
 
 plt.show()
+
+
