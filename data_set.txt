@@ -1,18 +1,16 @@
 # random 1st row to be skipped
-/Outbound/Primary/ACPProxy/A,1,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/B,0.5,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/C,2.2,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/d,1.3,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/e,3.5,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/f,0.9,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/g,3.4,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/h,1.1,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/i,1.8,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/j,2.7,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/k,2,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/l,1.3,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/m,1.5,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/n,2.7,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-/Outbound/Primary/ACPProxy/m,2.3,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
-
-
+/Inbound/Primary//A,1,Traffic type, Average utilization [Mbps],ACP top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/B,0.5,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/C,2.2,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/d,1.3,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/e,3.5,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/f,0.9,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/g,3.4,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Inbound/Primary/ProxyA/h,1.1,Traffic type, Average utilization [Mbps],PS1 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/i,1.8,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/j,2.7,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/k,2,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/l,1.3,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/m,1.5,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/n,2.7,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
+/Outbound/Primary/ProxyB/m,2.3,Traffic type, Average utilization [Mbps],PS2 top 15 utilization traffic classes
